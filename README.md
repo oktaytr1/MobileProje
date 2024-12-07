@@ -5,7 +5,7 @@ Bu proje, kuaför ve berber salonları için bir işletme yönetim uygulamasıd�
 
 Ayrıca, yapay zeka desteğiyle kullanıcılar saç modeli veya renk önerisi alabilirler.
 
-#Kullanılan Teknolojiler
+# Kullanılan Teknolojiler
 ASP.NET Core MVC
 C#
 Entity Framework Core
