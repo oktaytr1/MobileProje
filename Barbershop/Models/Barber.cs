@@ -9,7 +9,8 @@ namespace Barbershop.Models
 
         public string? BarberName { get; set; }
         public string? Specialization { get; set; }
-
+        
+        
 
 
         // child ref

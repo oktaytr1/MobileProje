@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Barbershop.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
@@ -29,23 +30,25 @@
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Barbers" asp-action="Index">Barbers</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Barbers" asp-action="Index">Berberler</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Haircuts" asp-action="Index">Haircut Options</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Haircuts" asp-action="Index">Hizmetler</a>
                             </li>
+                            
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users </a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Kullanıcılar</a>
                             </li>
+                          
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="ListAll">All Appointements </a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="ListAll">Tüm Randevular</a>
                             </li>
                             
                         }
-                        @* @if (!User.IsInRole("Admin"))  
-                        { *@
+
+                        
                              <li class="nav-item">
-                             <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Create">Book an Appointment</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Create">Randevu Alın</a>
                             </li>
 
                            
@@ -53,8 +56,14 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Index">My Appointments</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Hair" asp-action="AnalyzeHair">Saç analizi </a>
                             </li>
+                            @if (!User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Index">Randevularım</a>
+                            </li>
+                            }
                         }
                     </ul>
                     <partial name="_LoginPartial" />
@@ -70,7 +79,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Adam Brennan - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - OKTAY TÜRKMEN - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             <a href="https://github.com/Adam882094/Barbershop" target="_blank">View Source</a>
         </div>
     </footer>

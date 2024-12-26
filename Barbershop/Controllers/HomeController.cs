@@ -15,7 +15,15 @@ namespace Barbershop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                // Kullanıcı giriş yaptıysa Dashboard view'ını döndür
+                return View("Dashboard");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult Privacy()

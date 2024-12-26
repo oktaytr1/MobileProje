@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Mock Barbershop Application</h1>
 <p>This is a mock barbershop application that lets a customer create an account and book a haircut with a barber. 
   Additionally, it allows an admin to update barbers, haircut options, and haircut prices.</p>
@@ -41,6 +40,3 @@
   <li>Password: alskdjfhg555@</li>
   <li>Click 'Connect'</li>
 </ol>
-=======
-# BarberShopSystem
->>>>>>> 4172de3dcf078833ab5b5f9ec3dcf3b48fe1d5d2
